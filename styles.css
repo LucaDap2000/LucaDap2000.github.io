@@ -1,0 +1,255 @@
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-rendering: geometricprecision;
+}
+				
+[type=submit], [type=reset], button, html [type=button] {
+	text-transform: none;
+}
+				
+.container{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: var(--defaultFont);
+			
+	line-height: 1.6;
+	letter-spacing: 0.016em;
+}
+
+.container {
+	--borderRadius: 0.99em;
+	--borderRadiusBefore: 1em;
+	margin: 20px auto;
+	padding: 0px;
+}
+
+.container-item {
+	position: relative;
+    margin-top: 20px;
+	padding: .5em 1.2em;
+	width: max-content;
+	border-radius: var(--borderRadius);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	background:
+	radial-gradient(
+		circle at 5% 0%, 
+		rgb(235 236 238 / 100%), 
+		rgb(203 204 207 / 100%) 30%, 
+		rgb(152 152 153 / 100%) 70%
+	) padding-box,
+	/* METALLIC EDGE BORDER */
+	conic-gradient(
+		from 133deg at 50% 50%,
+		rgba(248, 248, 248, 1), rgba(248, 248, 248, 1) 31%, 
+		rgba(153, 153, 153, 1), rgba(153, 153, 153, 1),
+		rgba(136, 136, 160, 1), rgba(124, 142, 160, 1), rgba(114, 155, 157, 1), rgba(124, 165, 123, 1), rgba(158, 163, 121, 1), rgba(179, 154, 123, 1), rgba(184, 144, 128, 1),
+		rgba(153, 153, 153, 1), rgba(153, 153, 153, 1),
+		rgba(248, 248, 248, 1), rgba(248, 248, 248, 1) 45%,
+		rgba(248, 248, 248, 1), rgba(248, 248, 248, 1) 81%, 
+		rgba(153, 153, 153, 1), rgba(153, 153, 153, 1),
+		rgba(171, 173, 245, 1), rgba(137, 164, 190, 1), rgba(135, 186, 189, 1), rgba(131, 222, 128, 1), rgba(189, 197, 121, 1), rgba(229, 180, 120, 1), rgba(251, 154, 113, 1), 
+		rgba(153, 153, 153, 1) 95%, rgba(153, 153, 153, 1),
+		rgba(248, 248, 248, 1), rgba(248, 248, 248, 1)
+	) border-box;
+
+	border: 1.3px solid transparent;
+	background-blend-mode: normal, normal;
+	/* border: 1px solid hsla(0deg, 0%, 0%, .25); */
+	box-shadow:
+		inset 0 0 1px rgb(0 0 0 / 20%),
+		inset 0 1px 1px rgb(255 255 255 / 80%),
+		inset 0 -1px 1px rgb(0 0 0 / 40%),
+		0 0 2px rgb(0 0 0 / 15%),
+		0 3px 3px rgb(0 0 0 / 8%),
+		0 5px 8px rgb(0 0 0 / 3%);
+	overflow: hidden;
+}
+
+.container-item:before,
+.container-item:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container-item:before {
+	width: 200%;
+	height: 200%;
+	background: 
+	linear-gradient(
+		161deg,
+		transparent 10%,
+		transparent 20%,
+		rgba(115, 130, 165, 1), rgba(115, 140, 165, 1), rgba(86, 148, 156, 1), 
+		rgba(75, 154, 160, 1), rgba(85, 170, 146, 1), rgba(77, 186, 109, 1), 
+		rgba(103, 189, 100, 1), rgba(168, 180, 59, 1), rgba(210, 148, 74, 1), 
+		rgba(176, 110, 83, 1), rgba(99, 90, 79, .7),
+		transparent 80%,
+		transparent 90%,
+		transparent 100%
+	) padding-box,
+	linear-gradient(
+		161deg,
+		transparent 10%,
+		transparent 20%,
+		rgba(115, 130, 165, 1), rgba(115, 140, 165, 1), rgba(86, 148, 156, 1), 
+		rgba(75, 154, 160, 1), rgba(85, 170, 146, 1), rgba(77, 186, 109, 1), 
+		rgba(103, 189, 100, 1), rgba(168, 180, 59, 1), rgba(210, 148, 74, 1), 
+		rgba(176, 110, 83, 1), rgba(99, 90, 79, .7),
+		transparent 80%,
+		transparent 90%,
+		transparent 100%
+	) padding-box,
+	/* METALLIC EDGE BORDER */
+	conic-gradient(
+		from 343deg at 50% 50%, 
+		transparent,
+		transparent
+	) border-box;
+	border: 1.3px solid transparent;
+	
+	background-size: 800% 800%, 800% 800%, 100% 100%;
+	background-blend-mode: overlay, hard-light;
+	animation: backgroundMove 6s ease-in-out both infinite, opacityChange 15s linear both infinite;
+	mix-blend-mode: multiply;
+	z-index: -1;
+}
+
+.container-item:after {
+	--bp: 100%;
+	background-image: 
+	repeating-linear-gradient(
+		161deg,
+		transparent, transparent, rgba(255 255 255 / 30%),
+		transparent, transparent, rgba(255 255 255 / 10%),
+		transparent, transparent, rgba(255 255 255 / 30%),
+		rgba(0 0 0 / 30%), transparent, transparent,
+		rgba(255 255 255 / 20%), transparent, transparent,
+		transparent, rgba(255 255 255 / 60%), rgba(0 0 0 / 42%),
+		transparent, transparent, rgba(255 255 255 / 20%),
+		transparent, transparent, transparent,
+		rgba(255 255 255 / 38%), rgba(0 0 0 / 15%), transparent,
+		transparent, rgba(255 255 255 / 25%), transparent
+	),
+	repeating-linear-gradient(
+		161deg,
+		transparent, rgba(0 0 0 / 11%),
+		transparent, transparent,
+		rgba(0 0 0 / 33%), transparent,
+		transparent, transparent,
+		rgba(0 0 0 / 43%), transparent,
+		transparent, rgba(0 0 0 / 18%), transparent
+	);
+	background-size: 600% 600%;
+	background-position: calc(var(--bp)) calc(var(--bp));
+	background-blend-mode: lighten, multiply;
+	mix-blend-mode: plus-lighter;
+	opacity: 8%;
+	animation: backgroundMoveTwo 6s linear both infinite, opacityChangeTwo 8s linear both infinite;
+}
+
+@keyframes hrcolorChange {
+	0% { filter: hue-rotate(0deg) contrast(90%) saturate(160%); }
+	100% { filter: hue-rotate(360deg) contrast(90%) saturate(160%); }
+}
+
+@keyframes backgroundMove {
+	0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+	100%{ background-position: 0% 50%; }
+}
+
+@keyframes opacityChange {
+	0%, 100% { opacity: 1; }
+	75% { opacity: 0; }
+}
+
+@keyframes opacityChangeTwo {
+	0%, 100% { opacity: 8%; }
+	75% { opacity: 0; }
+}
+
+@keyframes backgroundMoveTwo {
+	0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
+}
+
+body {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "width" 100;
+}
+
+#grad {
+	background-image: linear-gradient(to bottom right, #e7eaf6, #9ba6a5);
+  }
+
+h1{
+	margin: 0;
+}
+
+h2{
+	margin: 0;
+}
+
+h3{
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+h4{
+	font-weight: 1000;
+}
+
+.workexp > p{
+	margin-left: 22px;
+}
+
+ol > li{
+	padding: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.profsummary{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.datesed{
+	float: inline-end;
+}
+
+.dateswe{
+	float: inline-end;
+	font-weight: 700;
+}
+
+
+
+
+
+  

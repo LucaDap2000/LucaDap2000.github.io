@@ -13,7 +13,6 @@
 	margin: 0;
 	width: 100%;
 	height: 100%;
-	font-family: var(--defaultFont);
 			
 	line-height: 1.6;
 	letter-spacing: 0.016em;
@@ -188,7 +187,7 @@
 body {
   font-family: "Playfair", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "width" 100;
@@ -241,11 +240,13 @@ ol > li{
 
 .datesed{
 	float: inline-end;
+	margin-right: 20px;
 }
 
 .dateswe{
 	float: inline-end;
 	font-weight: 700;
+	margin-right: 20px;
 }
 
 

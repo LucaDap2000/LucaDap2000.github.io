@@ -240,6 +240,7 @@ ol > li{
 
 .datesed{
 	float: inline-end;
+	font-weight: 700;
 	margin-right: 20px;
 }
 
